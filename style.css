@@ -1,0 +1,269 @@
+#sonicimg {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+body {
+  background-color: aqua;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+.container-fluid-navi {
+  position: fixed;
+}
+
+.head {
+  text-decoration: none;
+  color: aqua;
+  font-size: 18px;
+  list-style-type: none;
+  transition: .2s;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-right: 30px;
+}
+
+.d-flex {
+  margin-right: 20px;
+}
+
+.head:hover {
+  transform: scale(1.3);
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.dot {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0;
+  border-radius: 2px;
+
+}
+
+.hamburger-menu:hover {
+  transform: scale(1.3);
+}
+
+nav {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background: rgb(31, 27, 27);
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.side-menu {
+  height: 100%;
+  width: 300px;
+  background-color: rgb(38, 38, 61);
+  transition: margin.3s;
+  margin-left: -0;
+  box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+  top: 0;
+  z-index: 3;
+  padding-top: 20px;
+  overflow-y: scroll;
+  position: absolute;
+  cursor: pointer;
+
+}
+ #progress{
+  -webkit-appearance: none;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+.music-player button{
+  background: transparent;
+  outline: none;
+  border: none;
+  color: aliceblue;
+}
+
+#progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background-color: #f53192;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+.seek input {
+  width: 100%;
+  height: 2px;
+  bottom: 76px;
+  border: none;
+  border-radius: 2px;
+  position: fixed;
+  transform: translateZ(0);
+}
+.side-menu::-webkit-scrollbar{
+  width: 2px;
+  background-color: black;
+  
+}
+.side-menu::-webkit-scrollbar-thumb{
+  background-color: white;
+}
+
+#sidemenu-item {
+  color: aliceblue;
+
+}
+
+.pre {
+  color: rgb(40, 233, 240);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-top: 20px;
+}
+
+#login-sign-in {
+  color: rgb(62, 214, 214);
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background-color: #3d2d2d;
+  color: #fff;
+}
+
+.soundBar {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.music-player i {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.active {
+  margin-left: -300px;
+}
+
+#heart i {
+  margin-left: 20px;
+  font-size: 20px;
+  justify-content: space-between;
+}
+#heart{
+  margin-right: 100px;
+  display: flex;
+}
+#small{
+  font-size: 15px;
+  display: block;
+
+}
+.buttonheart{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+}
+#stro{
+  padding: 20px;
+  line-height: 1;
+  position: relative;
+  margin-right: 260px;
+}
+#strong{
+  font-size: 20px;
+  font-weight: 700;
+  display: inline;
+}
+#volume{
+    width: 8px;
+    height: 125px;
+    position: absolute;
+    bottom: 60px;
+    left: 270px;
+} 
+#volumebar{
+  -webkit-appearance: none;
+  background-color: aqua;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  height: 3px;
+  transform: rotateZ(270deg);
+  position: absolute;
+  left: 200px;
+  bottom: 20px;
+}
+#volumebar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: rgb(255, 0, 0);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* border: 5px solid #fff; */
+  box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+
+
+}
+#volume{
+  background-color: rgb(249, 244, 245);
+  height: 160px;
+  width: 35px;
+  /* margin-left: 100px; */
+  display: inline-block;
+  border-radius: 20px;
+  margin-left: 60px;
+  margin-bottom: -50px;
+}
+
+.timer {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-right: 10px;
+  display: flex;
+  border: 2px solid whitesmoke;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  border: fixed;
+  padding: 6px;
+  height: 40px;
+  width: 100px;
+}
+#music-details img{
+  position: fixed;
+  z-index: -2;
+  left:0;
+}

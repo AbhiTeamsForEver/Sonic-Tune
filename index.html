@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONICTUNE.HUB</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="httpsheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body style="background-color: rgb(58, 53, 53);">
+  <nav class="container-fluid-navi">
+    <div class="hamburger-menu" id="burger-menu" onclick="sidebar()">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+
+    <div class="">
+      <img id="sonicimg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_4qzNc_PdBCKNY6r9TXkPDzbI57vqHGtgqB-iiIoeSFonhLKWTrr7-vGHaUd5_Y9l8rI&usqp=CAU"
+        alt="">
+      <span
+        style="font-size: 21px; display: inline-block; margin-left: 7px; color: greenyellow; font-weight: 600;">SONICTUNE</span>
+    </div>
+
+    <div class="buttons" style="margin-bottom: 8px;">
+      <button class="head">Home</button>
+      <button class="head">Favourite</button>
+      <button class="head">My Playlist</button>
+      <button class="head">Music Language</button>
+      <button class="head">Songs</button>
+    </div>
+    <div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Songs, Artists." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search </button>
+      </form>
+
+    </div>
+  </nav>
+  <div id="side-menu" class="side-menu active">
+    <div id="login-sign-in">
+      <i class="bi bi-person"></i>
+      <span>login-sign-in</span>
+      <i class="bi bi-arrow-left-square-fill" style="font-size: 30px; color: whitesmoke; margin-left: 50px;"
+        onclick="sidemenuremover()"></i>
+    </div>
+
+    <hr style="margin-left: -32px; color: aliceblue;">
+    <div id="sidemenu-item">
+      <ul>
+        <b>
+          <li style="color: rgb(16, 243, 167);">NOTIFICATION <i class="bi bi-bell-fill"
+              style="font-size: 25px; margin-left: 100px; color: red;"></i></li>
+        </b>
+        <hr style="margin-left: -32px;">
+        <li>Home <i class="bi bi-house-door" style="font-size: 20px; margin-left: 5px; color: antiquewhite;"></i></li>
+        <li>Radio <i class="bi bi-broadcast-pin"
+            style="font-size: 20px; margin-left: 5px; color: rgb(206, 144, 144);"></i></li>
+        <li>Podcast <i class="bi bi-mic-fill" style="font-size: 20px; margin-left: 5px; color: rgb(93, 185, 7);"></i>
+        </li>
+        <li>My Playlist <i class="bi bi-music-note-list" style="font-size: 20px; color: aqua; margin-left: 10px;"></i>
+        </li>
+        <li>Indian Music's <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(238, 17, 238);"></i></li>
+        <li>Tamil Music's <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(17, 205, 238);"></i></li>
+        <li>English Songs <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(238, 223, 17);"></i></li>
+        <li>Language <i class="bi bi-translate"
+            style="font-size: 20px; margin-left: 5px; color: rgb(241, 224, 224); "></i></li>
+        <hr style="margin-left: -32px;">
+        <h3 class="pre">Go Premium</h3>
+        <b>
+          <li style="color: red;">Get SONICTUNE.HUB Premium</li>
+        </b>
+        <button id="button" style="margin-top: 15px; background-color: beige; margin-left: 25px;">Best Offer Only For
+          You</button>
+        <hr style="margin-left: -32px;">
+        <h3 class="pre">Quick Access</h3>
+        <li>Trending Songs <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(238, 17, 153);"></i></li>
+        <li>New Songs <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(238, 87, 17);"></i></li>
+        <li>Old Songs <i class="bi bi-music-note-beamed"
+            style="font-size: 20px; margin-left: 5px; color: rgb(17, 205, 238);"></i></li>
+        <li>Album <i class="bi bi-journal-album" style="font-size: 20px; margin-left: 5px; color: darksalmon;"></i></li>
+        <li>Artist <i class="bi bi-people" style="font-size: 20px; margin-left: 5px; color: rgb(89, 89, 247);"></i></li>
+        <li>Lyrics</li>
+        <li>Music Label <i class="bi bi-music-player" style="font-size: 20px; margin-left: 5px; color: teal;"></i></li>
+      </ul>
+    </div>
+  </div>
+  <div class="soundBar">
+    <div class="seek">
+      <input type="range" value="0" id="progress">
+    </div>
+    <div id="music-details">
+      <img height="70px" src="https://i.ytimg.com/vi/LeB_f3VbaQw/sddefault.jpg" class="song-img">
+        <span id="strong">SHAPE OF YOU</span>
+        <span id="small">(Ed Sheeran)</span>
+    </div>
+    <i class="bi bi-volume-up-fill" onclick="handleVolume()"></i>
+    <!-- <div class=""></div> -->
+    <div>
+      <i class="bi bi-volume-up-fill" style="color: red; position: absolute;"></i>
+      <button class="buttonheart"><i class="bi bi-heart" id="Favourite" onclick="Fav()"></i></button>
+      <a href="Ed Sheeran - Shape Of You (Lyrics).mp3" download><button class="buttonheart"><i style="color: chartreuse;" class="bi bi-download"></i></button></a>
+      <button style="background-color: transparent; border: none; font-size: 25px; color: rgb(8, 137, 250);" class="bi bi-share-fill"></button>
+    </div>
+
+    <div class="music-player">
+      <audio id="song">
+        <source src="Ed Sheeran - Shape Of You (Lyrics).mp3" type="audio/mpeg">
+      </audio>
+      <button><i class="bi bi-repeat" style="font-size: 24px;"></i></button>
+      <button><i class="bi bi-skip-backward-fill" onclick="goBackward()"></i></button>
+      <button><i class="bi bi-play-circle" id="Play" onclick="playpause()"
+          style="font-size: 30px; background-color: red; border-radius: 300px; transform: scale(1.5);display: inline-flex; align-items: center;  border-radius: 50%; box-shadow: rgba(255, 254, 254, 0.973) 0px 3px 20px;"></i></button>
+      <!-- <i class="bi bi-pause-circle-fill"
+        style="font-size: 30px; background-color: red; border-radius: 300px; transform: scale(1.5);display: inline-flex; align-items: center;  border-radius: 50%; box-shadow: rgb(255, 255, 255) 0px 3px 20px;"></i> -->
+      <button><i class="bi bi-skip-forward-fill" onclick="goForward()"></i></button>
+      <button><i class="bi bi-shuffle" style="font-size: 24px;"></i></button>
+    </div>
+    <div class="timer">
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span>
+    </div>
+    <button style="font-size: 20px;"><i class="bi bi-chevron-up"></i></button>
+    <div id="volume" style="display: none;">
+      <input type="range" value="0" id="volumebar" min="0" max="100" value="50">
+    </div>
+  </div>
+  <!-- <footer>
+    <img src="https://icons.getbootstrap.com/icons/facebook/" alt="">
+    <img src="https://icons.getbootstrap.com/icons/twitter/" alt="">
+    <img src="https://icons.getbootstrap.com/icons/instagram/" alt="">
+    <div>
+      <p>Advertise on SONICTUNE.com</p>
+      <p>Terms of Use</p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <hr style="margin-left: -32px;">
+    <b><p style="margin-bottom: 100px;">&copy; 2023 SONICTUNE.HUB, All rights reserved.</p></b>
+  </footer> -->
+
+  <script src="sonic.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
